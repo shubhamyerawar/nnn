@@ -1,0 +1,6 @@
+{
+    "git.showPushSuccessNotification": true,
+    "git.fetchOnPull": true,
+    "git.defaultCloneDirectory": "",
+    "git.autofetch": true
+}
