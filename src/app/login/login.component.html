@@ -1,3 +1,72 @@
-<p>
-  login works!
-</p>
+<style>
+  .background {
+    background-image: url('../assets/images/bgBlur2.png') !important;
+    background-size: cover;
+    overflow: hidden;
+    height: 100vh;
+
+  }
+  .img {
+    height: 59px;
+    width: 240px;
+  }
+  .shade{
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+</style>
+
+
+<div class="background">
+  <div class="shade">
+  <div class="page">
+    <div class="page-single">
+      <div class="container">
+        <div class="row">
+          <div class="col col-login mx-auto">
+            <div class="text-center mb-2">
+              <img src="../assets/images/TriarqOTC.png" class="img" alt="">
+            </div>
+
+            <form [formGroup]="loginForm" class="card blur" (submit)="login(loginForm.value)">
+              <div class="card-body p-6">
+                <div class="card-title text-center">Login to your account</div>
+                <!-- <div>
+                          <app-error [exception]="exception"></app-error>
+                        </div> -->
+                <div class="form-group">
+                  <label class="form-label" style="color:red">{{exception}} </label>
+                  <label class="form-label">User Name</label>
+                  <input type="text" class="form-control form-control-sm" formControlName="username" placeholder="Enter username">
+                </div>
+                <div class="form-group">
+                  <label class="form-label">
+                    Password
+                  </label>
+                  <input type="password" class="form-control form-control-sm" formControlName="password" placeholder="Password">
+                </div>
+                <div class="form-group">
+                  <label class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" />
+                    <span class="custom-control-label">Remember me</span>
+                  </label>
+                </div>
+
+                <div>
+                  <button type="submit" class="btn btn-outline-primary btn-block btn-sm p-2">Sign in</button>
+                  <!-- <button  class="btn btn-outline-warning btn-block btn-sm">Sign in with Google</button> -->
+                </div>
+                <div class="text-center text-mute mt-4">
+                  Don't have account yet?
+                  <a href="#">Sign up</a>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
